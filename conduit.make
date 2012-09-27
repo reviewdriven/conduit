@@ -4,7 +4,8 @@ core = 7.x
 
 projects[boolean] = 1.0
 projects[entity] = 1.0-rc3
-projects[entityreference] = 1.0-rc1
+projects[entityreference] = 1.0-rc5
+projects[field_group] = 1.1
 projects[field_group_views] = 1.1
 projects[field_helper] = 1.1
 projects[field_suppress] = 1.0
@@ -18,3 +19,4 @@ projects[services][version] = 3.1
 projects[services][patch][1355952] = http://drupal.org/files/1355952-drush-make.patch
 
 projects[services_tools] = 3.2
+projects[views] = 3.3
