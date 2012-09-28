@@ -359,7 +359,7 @@ function conduit_insert($node) {
     $node->conduit_log[LANGUAGE_NONE] = array();
     for ($i = 0; $i < $chunk_count; $i++) {
       $node->conduit_chunk_status[LANGUAGE_NONE][$i]['value'] = -1;
-      $node->conduit_log[LANGUAGE_NONE][$i]['value'] = '[placeholder]';
+      $node->conduit_log[LANGUAGE_NONE][$i]['value'] = '[pending]';
     }
 
     // Since the plugin stores its results it must initialize its field(s).
