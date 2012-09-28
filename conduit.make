@@ -8,7 +8,7 @@ projects[entityreference] = 1.0-rc5
 projects[field_group] = 1.1
 projects[field_group_views] = 1.1
 projects[field_helper] = 1.1
-projects[field_suppress] = 1.0
+projects[field_suppress] = 1.1
 
 projects[serial][type] = module
 projects[serial][download][type] = git
