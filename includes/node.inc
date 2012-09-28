@@ -351,6 +351,12 @@ function conduit_insert($node) {
     $node->conduit_status[LANGUAGE_NONE][0]['value'] = 0;
     $node->conduit_duration[LANGUAGE_NONE][0]['value'] = 0;
     $node->conduit_summary[LANGUAGE_NONE][0]['value'] = t('The job has not yet been performed.');
+
+    // Ensure the previous chunk states are cleared since this is called from
+    // conduit_update() and in the case where fewer chunks are present in the
+    // new revision the last chunks will not be removed.
+    $node->conduit_chunk_status[LANGUAGE_NONE] = array();
+    $node->conduit_log[LANGUAGE_NONE] = array();
     for ($i = 0; $i < $chunk_count; $i++) {
       $node->conduit_chunk_status[LANGUAGE_NONE][$i]['value'] = -1;
       $node->conduit_log[LANGUAGE_NONE][$i]['value'] = '[placeholder]';
