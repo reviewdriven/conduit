@@ -33,6 +33,15 @@ function conduit_execute_conduit_default_properties() {
 }
 
 /**
+ * Implements hook_conduit_init().
+ */
+function conduit_execute_conduit_init($node, $chunk_count) {
+  for ($delta = 0; $delta < $chunk_count; $delta++) {
+    $node->conduit_result_conduit_execute[LANGUAGE_NONE][$delta]['value'] = '[pending]';
+  }
+}
+
+/**
  * Implements hook_conduit_result().
  */
 function conduit_execute_conduit_result($node, $delta, $result) {
